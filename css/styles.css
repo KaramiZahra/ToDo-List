@@ -1,0 +1,115 @@
+:root{
+    --purple: #977ff1;
+    --blue: #67a2fd;
+    --pink: #e97e9f;
+    --thistle: #ddcde4;
+    --dimgrey: #727577;
+    --white: #ffffff;
+    --black: #000;
+}
+.white-color{
+    background-color: var(--white);
+    color: var(--black);
+}
+.black-color{
+    background-color: var(--dimgrey);
+    color: var(--white);
+}
+body{
+    background-color: gainsboro;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 33rem;
+    margin: 4rem auto;
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-box{
+    width: 67%;
+    height: 2.2rem;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .3rem;
+    margin-bottom: 1.5rem;
+}
+.text-input{
+    flex-basis: 82%;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    font-size: small;
+    font-family: inherit;
+}
+.fa-plus{
+    flex-basis: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--purple);
+    border-radius: 0 .3rem .3rem 0;
+}
+.to-do-container{
+    width: 67%;
+    height: max-content;
+    padding: 0;
+}
+.to-do-box:first-child{
+    display: none;
+}
+.to-do-box{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+}
+.to-do-text{
+    flex-basis: 72%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.to-do-box .fa-check,
+.to-do-box .fa-trash {
+    flex-basis: 14%;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-do-box .fa-check{
+    background-color: var(--pink);
+}
+.to-do-box .fa-trash{
+    background-color: var(--blue);
+    border-radius: 0 .3rem .3rem 0;
+}
+.fa-plus:hover,
+.fa-check:hover,
+.fa-trash:hover{
+    color: var(--black);
+}
+@media screen and (max-width:576px) {
+    .container{
+        margin: 1rem auto;
+    }
+    .input-box,
+    .to-do-container{
+        width: 88%;
+    }
+}
