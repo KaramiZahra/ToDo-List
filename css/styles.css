@@ -61,14 +61,33 @@ body{
     background-color: var(--purple);
     border-radius: 0 .3rem .3rem 0;
 }
+.btn-container{
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 67%;
+}
+.all-btn,
+.done-btn,
+.deleted-btn{
+    background-color: var(--thistle);
+    font-family: inherit;
+    border: 1px solid var(--thistle);
+    border-radius: .3rem;
+    width: 31%;
+    padding: .5rem;
+}
+.all-btn:hover,
+.done-btn:hover,
+.deleted-btn:hover{
+    color: var(--dimgrey);
+    border: 1px solid var(--dimgrey);
+}
 .to-do-container{
     width: 67%;
     height: max-content;
     padding: 0;
 }
-.to-do-box:first-child{
-    display: none;
-}
+
 .to-do-box{
     width: 100%;
     height: max-content;
@@ -76,6 +95,9 @@ body{
     justify-content: space-between;
     border-radius: .3rem;
     margin-bottom: 1rem;
+}
+.to-do-box:first-child{
+    display: none;
 }
 .to-do-text{
     flex-basis: 72%;

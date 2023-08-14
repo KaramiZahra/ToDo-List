@@ -46,3 +46,7 @@ inputText.addEventListener('keypress', function (event) {
         addFunction()
     }
 })
+
+let allBtn = document.querySelector('.all-btn')
+let doneBtn = document.querySelector('.done-btn')
+let deletedBtn = document.querySelector('.deleted-btn')
