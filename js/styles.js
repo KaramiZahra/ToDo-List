@@ -1,6 +1,7 @@
 let addBtn = document.querySelector(".fa-plus");
 let inputText = document.querySelector(".text-input");
 let toDoContainer = document.querySelector(".to-do-container");
+let counter = 0;
 
 // autofocus the input box
 window.addEventListener("load", function () {
@@ -16,6 +17,8 @@ function addFunction() {
     // create new elements
     let newToDoLi = document.createElement("li");
     newToDoLi.className = "to-do-box white-color";
+    newToDoLi.setAttribute("id", "todo-" + counter);
+    newToDoLi.draggable = true;
 
     let newToDoP = document.createElement("p");
     newToDoP.className = "to-do-text";
@@ -46,7 +49,24 @@ function addFunction() {
         newToDoLi.classList.add("white-color");
       }
     });
+
+    // drag and drop
+    newToDoLi.addEventListener("dragstart", function (e) {
+      e.dataTransfer.setData("toDo", e.target.id);
+    });
+
+    toDoContainer.addEventListener("dragover", function (e) {
+      e.preventDefault();
+    });
+
+    toDoContainer.addEventListener("drop", function (e) {
+      let getToDo = e.dataTransfer.getData("toDo");
+      let getToDoId = document.getElementById(getToDo);
+
+      toDoContainer.append(getToDoId);
+    });
   }
+  counter++;
 }
 
 // add a new todo with both enter key and click event
