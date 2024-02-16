@@ -12,7 +12,7 @@
   color: var(--white);
 }
 body {
-  background-color: gainsboro;
+  background-color: #dcdcdc;
   font-family: "Courier New", Courier, monospace;
 }
 .container {
@@ -56,7 +56,7 @@ body {
   align-items: center;
   color: var(--white);
   background-color: var(--purple);
-  border-radius: 0 0.3rem 0.3rem 0;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
 /* buttons  */
 .btn-container {
@@ -73,12 +73,14 @@ body {
   border-radius: 0.3rem;
   width: 31.5%;
   padding: 0.5rem;
+  transition: all 0.3s;
 }
 .all-btn:hover,
 .completed-btn:hover,
 .incomplete-btn:hover {
-  color: #555;
+  color: var(--white);
   border: 1px solid #888;
+  cursor: pointer;
 }
 /* todo box  */
 .to-do-container {
@@ -98,7 +100,7 @@ body {
 }
 .to-do-box:hover {
   cursor: grab;
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 .to-do-text {
   flex-basis: 72%;
@@ -123,13 +125,14 @@ body {
 }
 .to-do-box .fa-trash {
   background-color: var(--blue);
-  border-radius: 0 0.3rem 0.3rem 0;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
 .fa-plus:hover,
 .fa-check:hover,
 .fa-xmark:hover,
 .fa-trash:hover {
   color: var(--black);
+  cursor: pointer;
 }
 /* responsive  */
 @media screen and (max-width: 576px) {
